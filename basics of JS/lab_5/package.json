@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "name": "Project_1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    justify-content: center;
+    max-width: 75vw;
+    margin: auto;
+    font-size: larger;
+    background-color: rgb(191, 224, 218);
+    div.navbar {
+        display: flex; 
+        align-items: center;
+        justify-items: flex-start;
+        justify-content: space-evenly;
+        #logo{
+            display: flex;
+            align-items: center;
+            img{
+                padding: 15px;
+                width: 40px;
+            } 
+        }
+    }
+    #movies{
+        table{
+            text-align: center;
+            width: 65vw;
+            thead {
+                div.sort-by{
+                    padding: 25px;
+                    text-decoration: underline;
+                    color: fuchsia;
+                    &:hover{
+                        color: #000;
+                        cursor: pointer;
+                    }
+                }
+            }
+            th, td {
+                padding: 15px;
+                border: 1px solid black;
+            }
+            td{
+                background-color: rgb(216, 40, 157);
+                color: yellow;
+                a{
+                    color: yellow;
+                }
+                input[type=checkbox] {
+                    transform: scale(1.5);
+                }
+            }
+            th {
+                background-color: #465751;
+                color: white;
+            }
+            td:first-child{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        div.pagination{
+            button {
+                background-color: white;
+                color: black;
+                float: left;
+                padding: 16px 32px;
+                text-decoration: none;
+            }
+        }
+    }
+    #movie{
+        width: 50vw;
+        border: 3px solid black;
+        padding: 20px;
+        #arrow{
+            width: 100px;
+        } 
+        .star-rating {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            overflow: hidden;
+            flex-direction: row-reverse;
+            position: relative;
+            input {
+                display: none;
+            }
+            label {
+                margin-top: auto;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                background: url(disabledstar.png)no-repeat center / 75%;
+                transition: 0.5s;
+            }
+            input:checked ~ label,
+            input:checked ~ label ~ label {
+                background: url(star.png)no-repeat center / 75%;
+            }
+        }
+    }
+    #form{
+        width: 40vw;
+        h2{
+            text-align: center;
+        }
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    }
+    button{
+        background-color: blue;
+        border: none;
+        color: white;
+        padding: 10px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    #thumbnail{
+        width: 182px;
+        height: 268px;
+    }
+    #star{
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+      max-width: 100vw;
+      background-color: palegreen;
+      #home {
+          width: 85vw;
+      }
+      #movie{
+          width: 85vw;
+      }
+      #form {
+          width: 70vw;
+      }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+    background-color: wheat;
+    #form{
+        width: 95vw;
+    }
+    #movies{
+        width: 95vw;
+    }
+    table{
+        
+        width: 100%;
+        thead{
+            div.sort-by{
+            padding: 2px;
+            }
+        }
+        tr {
+            display: table-cell;
+            width: 100%;
+            padding: 3px;
+        }
+        tr td {
+            display: block;
+        }
+        tr th {
+            display: block;
+        }
+        tbody{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }    
+    }
+}

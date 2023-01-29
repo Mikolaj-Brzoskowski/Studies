@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: ticket-app
+    type: frontend
+
+spec:
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: ticket-app
+        type: frontend
+    spec:
+      containers:
+        - name: nginx-container
+          image: pikussmietnikus/ticket-frontend
+  
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ticket-app
+      type: frontend
+
+
+

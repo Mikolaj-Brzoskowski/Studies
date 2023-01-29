@@ -1,0 +1,7 @@
+div {
+    color: blue;
+}
+
+.text-color > div{
+    color: orange;
+}

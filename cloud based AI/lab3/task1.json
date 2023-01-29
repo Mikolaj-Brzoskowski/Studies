@@ -1,0 +1,418 @@
+{
+  "version": 4,
+  "terraform_version": "1.3.5",
+  "serial": 9,
+  "lineage": "39527689-6d9d-51fb-459e-2ef20147c249",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "aws_lex_bot",
+      "name": "order_flowers",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lex:us-east-1:675774772086:bot:mbrzoskowski_OrderFlowers",
+            "checksum": "08dc9439-9335-4766-b9d9-bd916f26a7cf",
+            "child_directed": false,
+            "created_date": "2022-11-21T15:01:50Z",
+            "description": "Bot to order flowers on the behalf of a user",
+            "detect_sentiment": false,
+            "enable_model_improvements": false,
+            "failure_reason": "",
+            "id": "mbrzoskowski_OrderFlowers",
+            "idle_session_ttl_in_seconds": 600,
+            "last_updated_date": "2022-11-21T15:02:05Z",
+            "locale": "en-US",
+            "name": "mbrzoskowski_OrderFlowers",
+            "nlu_intent_confidence_threshold": 0,
+            "status": "READY",
+            "version": "$LATEST",
+            "voice_id": "Salli"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_lex_bot_alias",
+      "name": "order_flowers_dev",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lex:us-east-1:675774772086:bot:mbrzoskowski_OrderFlowers:mbrzoskowski_OrderFlowersDev",
+            "bot_name": "mbrzoskowski_OrderFlowers",
+            "bot_version": "$LATEST",
+            "checksum": "3b28789f-0b7c-42ad-b162-884759231199",
+            "created_date": "2022-11-21T15:02:15Z",
+            "description": "Development version of bot to order flowers on the behalf of a user",
+            "id": "mbrzoskowski_OrderFlowers:mbrzoskowski_OrderFlowersDev",
+            "last_updated_date": "2022-11-21T15:02:15Z",
+            "name": "mbrzoskowski_OrderFlowersDev"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_lex_intent",
+      "name": "order_flowers",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lex:us-east-1:675774772086:intent:mbrzoskowski_OrderFlowers",
+            "checksum": "a413bee6-04d6-4eb9-9951-c9dd93070823",
+            "created_date": "2022-11-21T15:01:50Z",
+            "description": "Intent to order a bouquet of flowers for pick up",
+            "id": "mbrzoskowski_OrderFlowers",
+            "last_updated_date": "2022-11-21T15:01:50Z",
+            "name": "mbrzoskowski_OrderFlowers",
+            "parent_intent_signature": "",
+            "version": "$LATEST"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "aws_lex_slot_type",
+      "name": "flower_types",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "checksum": "7f5d76c3-29a6-4ab5-9227-9b5bf14825ed",
+            "created_date": "2022-11-21T15:01:49Z",
+            "description": "Types of flowers to pick up",
+            "enumeration_value": [
+              {
+                "synonyms": [],
+                "value": "lilies"
+              },
+              {
+                "synonyms": [],
+                "value": "roses"
+              },
+              {
+                "synonyms": [],
+                "value": "tulips"
+              }
+            ],
+            "id": "mbrzoskowski_FlowerTypes",
+            "last_updated_date": "2022-11-21T15:01:49Z",
+            "name": "mbrzoskowski_FlowerTypes",
+            "value_selection_strategy": "ORIGINAL_VALUE",
+            "version": "$LATEST"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lex_bot",
+      "name": "order_flowers",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "abort_statement": [
+              {
+                "message": [
+                  {
+                    "content": "Sorry, I am not able to assist at this time",
+                    "content_type": "PlainText",
+                    "group_number": null
+                  }
+                ],
+                "response_card": ""
+              }
+            ],
+            "arn": "arn:aws:lex:us-east-1:675774772086:bot:mbrzoskowski_OrderFlowers",
+            "checksum": "08dc9439-9335-4766-b9d9-bd916f26a7cf",
+            "child_directed": false,
+            "clarification_prompt": [
+              {
+                "max_attempts": 2,
+                "message": [
+                  {
+                    "content": "I didn't understand you, what would you like to do?",
+                    "content_type": "PlainText",
+                    "group_number": null
+                  }
+                ],
+                "response_card": ""
+              }
+            ],
+            "create_version": false,
+            "created_date": "2022-11-21T15:01:50Z",
+            "description": "Bot to order flowers on the behalf of a user",
+            "detect_sentiment": false,
+            "enable_model_improvements": false,
+            "failure_reason": "",
+            "id": "mbrzoskowski_OrderFlowers",
+            "idle_session_ttl_in_seconds": 600,
+            "intent": [
+              {
+                "intent_name": "mbrzoskowski_OrderFlowers",
+                "intent_version": "$LATEST"
+              }
+            ],
+            "last_updated_date": "2022-11-21T15:02:05Z",
+            "locale": "en-US",
+            "name": "mbrzoskowski_OrderFlowers",
+            "nlu_intent_confidence_threshold": 0,
+            "process_behavior": "BUILD",
+            "status": "READY",
+            "timeouts": null,
+            "version": "$LATEST",
+            "voice_id": "Salli"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjMwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "aws_lex_intent.order_flowers",
+            "aws_lex_slot_type.flower_types"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lex_bot_alias",
+      "name": "order_flowers_dev",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lex:us-east-1:675774772086:bot:mbrzoskowski_OrderFlowers:mbrzoskowski_OrderFlowersDev",
+            "bot_name": "mbrzoskowski_OrderFlowers",
+            "bot_version": "$LATEST",
+            "checksum": "3b28789f-0b7c-42ad-b162-884759231199",
+            "conversation_logs": [],
+            "created_date": "2022-11-21T15:02:15Z",
+            "description": "Development version of bot to order flowers on the behalf of a user",
+            "id": "mbrzoskowski_OrderFlowers:mbrzoskowski_OrderFlowersDev",
+            "last_updated_date": "2022-11-21T15:02:15Z",
+            "name": "mbrzoskowski_OrderFlowersDev",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMCwiZGVsZXRlIjozMDAwMDAwMDAwMDAsInVwZGF0ZSI6NjAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "aws_lex_bot.order_flowers",
+            "aws_lex_intent.order_flowers",
+            "aws_lex_slot_type.flower_types"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lex_intent",
+      "name": "order_flowers",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "arn": "arn:aws:lex:us-east-1:675774772086:intent:mbrzoskowski_OrderFlowers",
+            "checksum": "a413bee6-04d6-4eb9-9951-c9dd93070823",
+            "conclusion_statement": [],
+            "confirmation_prompt": [
+              {
+                "max_attempts": 2,
+                "message": [
+                  {
+                    "content": "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}, and will cost [Price] dollars.  Does this sound okay?",
+                    "content_type": "PlainText",
+                    "group_number": null
+                  },
+                  {
+                    "content": "Okay, your {FlowerType} will be ready for pickup by {PickupTime} on {PickupDate}.  Does this sound okay?",
+                    "content_type": "PlainText",
+                    "group_number": null
+                  }
+                ],
+                "response_card": ""
+              }
+            ],
+            "create_version": false,
+            "created_date": "2022-11-21T15:01:50Z",
+            "description": "Intent to order a bouquet of flowers for pick up",
+            "dialog_code_hook": [],
+            "follow_up_prompt": [],
+            "fulfillment_activity": [
+              {
+                "code_hook": [],
+                "type": "ReturnIntent"
+              }
+            ],
+            "id": "mbrzoskowski_OrderFlowers",
+            "last_updated_date": "2022-11-21T15:01:50Z",
+            "name": "mbrzoskowski_OrderFlowers",
+            "parent_intent_signature": null,
+            "rejection_statement": [
+              {
+                "message": [
+                  {
+                    "content": "Okay, I will not place your order.",
+                    "content_type": "PlainText",
+                    "group_number": null
+                  }
+                ],
+                "response_card": ""
+              }
+            ],
+            "sample_utterances": [
+              "I would like to order some flowers",
+              "I would like to pick up flowers"
+            ],
+            "slot": [
+              {
+                "description": "The date to pick up the flowers",
+                "name": "PickupDate",
+                "priority": 2,
+                "response_card": "",
+                "sample_utterances": [],
+                "slot_constraint": "Required",
+                "slot_type": "AMAZON.DATE",
+                "slot_type_version": "",
+                "value_elicitation_prompt": [
+                  {
+                    "max_attempts": 2,
+                    "message": [
+                      {
+                        "content": "Pick up the {FlowerType} at {PickupTime} on what day?",
+                        "content_type": "PlainText",
+                        "group_number": null
+                      },
+                      {
+                        "content": "What day do you want the {FlowerType} to be picked up?",
+                        "content_type": "PlainText",
+                        "group_number": null
+                      }
+                    ],
+                    "response_card": ""
+                  }
+                ]
+              },
+              {
+                "description": "The time to pick up the flowers",
+                "name": "PickupTime",
+                "priority": 3,
+                "response_card": "",
+                "sample_utterances": [],
+                "slot_constraint": "Required",
+                "slot_type": "AMAZON.TIME",
+                "slot_type_version": "",
+                "value_elicitation_prompt": [
+                  {
+                    "max_attempts": 2,
+                    "message": [
+                      {
+                        "content": "At what time do you want the {FlowerType} to be picked up?",
+                        "content_type": "PlainText",
+                        "group_number": null
+                      },
+                      {
+                        "content": "Pick up the {FlowerType} at what time on {PickupDate}?",
+                        "content_type": "PlainText",
+                        "group_number": null
+                      }
+                    ],
+                    "response_card": ""
+                  }
+                ]
+              },
+              {
+                "description": "The type of flowers to pick up",
+                "name": "FlowerType",
+                "priority": 1,
+                "response_card": "",
+                "sample_utterances": [
+                  "I would like to order {FlowerType}"
+                ],
+                "slot_constraint": "Required",
+                "slot_type": "mbrzoskowski_FlowerTypes",
+                "slot_type_version": "$LATEST",
+                "value_elicitation_prompt": [
+                  {
+                    "max_attempts": 2,
+                    "message": [
+                      {
+                        "content": "What type of flowers would you like to order?",
+                        "content_type": "PlainText",
+                        "group_number": null
+                      }
+                    ],
+                    "response_card": ""
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "version": "$LATEST"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMCwiZGVsZXRlIjozMDAwMDAwMDAwMDAsInVwZGF0ZSI6NjAwMDAwMDAwMDB9fQ==",
+          "dependencies": [
+            "aws_lex_slot_type.flower_types"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_lex_slot_type",
+      "name": "flower_types",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "checksum": "7f5d76c3-29a6-4ab5-9227-9b5bf14825ed",
+            "create_version": false,
+            "created_date": "2022-11-21T15:01:49Z",
+            "description": "Types of flowers to pick up",
+            "enumeration_value": [
+              {
+                "synonyms": [],
+                "value": "lilies"
+              },
+              {
+                "synonyms": [],
+                "value": "roses"
+              },
+              {
+                "synonyms": [],
+                "value": "tulips"
+              }
+            ],
+            "id": "mbrzoskowski_FlowerTypes",
+            "last_updated_date": "2022-11-21T15:01:49Z",
+            "name": "mbrzoskowski_FlowerTypes",
+            "timeouts": null,
+            "value_selection_strategy": "ORIGINAL_VALUE",
+            "version": "$LATEST"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMCwiZGVsZXRlIjozMDAwMDAwMDAwMDAsInVwZGF0ZSI6NjAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

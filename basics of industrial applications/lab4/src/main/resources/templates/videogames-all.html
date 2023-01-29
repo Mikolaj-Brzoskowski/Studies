@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>All Video Games</title>
+</head>
+<body>
+<h2>Games from database</h2>
+<div th:switch="${allGamesFromDB}">
+  <h2 th:case="null">No games yet!</h2>
+  <div th:case="*">
+    <h2>Video Games</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Release year</th>
+        <th>Platform</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="game : ${allGamesFromDB}">
+        <td th:text="${game.id}"></td>
+        <td th:text="${game.title}"></td>
+        <td th:text="${game.release_year}"></td>
+        <td th:text="${game.platform}"></td>
+        <td><a th:href="@{/web/videogames/edit/{id}(id=${game.id})}">Edit</a></td>
+        <td><a th:href="@{/web/videogames/delete/{id}(id=${game.id})}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a href="/web/videogames/form">Add a new game</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "bots": [
+        {
+            "name": "mbrzoskowski_OrderFlowers",
+            "description": "Bot to order flowers on the behalf of a user",
+            "status": "READY",
+            "lastUpdatedDate": "2022-11-21T16:02:05.276000+01:00",
+            "createdDate": "2022-11-21T16:01:50.800000+01:00",
+            "version": "$LATEST"
+        }
+    ]
+}

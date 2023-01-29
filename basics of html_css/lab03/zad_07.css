@@ -1,0 +1,21 @@
+
+.A {
+    position: relative;
+    left: 20px;
+    bottom: 10px;
+}
+.B {
+    position: relative;
+    left: 20px;
+    bottom: 25px;
+}
+
+.C {
+    position: relative;
+    border: solid red 3px;
+    background-color: yellow;
+    width: 30%;
+    height: 15px;
+    top: 20px;
+    padding: 15px;
+}

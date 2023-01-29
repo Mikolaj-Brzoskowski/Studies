@@ -1,0 +1,9 @@
+bin = 11101
+potega = 0
+dec = 0
+
+while bin != 0:
+    dec =  dec + (bin % 10) * 2 ** potega
+    bin = int(bin /10)
+    potega += 1
+print(dec)

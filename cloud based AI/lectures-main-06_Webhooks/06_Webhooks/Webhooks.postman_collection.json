@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "9e683a52-c6d1-4586-b717-f7995c95f53c",
+		"name": "Webhooks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23770093"
+	},
+	"item": [
+		{
+			"name": "app",
+			"item": [
+				{
+					"name": "speech-webhook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-MicrosoftSpeechServices-Event",
+								"value": "PostmanTest",
+								"type": "text"
+							},
+							{
+								"key": "X-MicrosoftSpeechServices-Signature",
+								"value": "fake-signature",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/speech-webhook",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"speech-webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "speech-webhook with validationToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/speech-webhook?validationToken=hi-i-am-your-validation-token",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"speech-webhook"
+							],
+							"query": [
+								{
+									"key": "validationToken",
+									"value": "hi-i-am-your-validation-token"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "azure",
+			"item": [
+				{
+					"name": "list webhooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/webhooks",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"webhooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "test webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/webhooks/{{WEBHOOK_ID}}:test",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"webhooks",
+								"{{WEBHOOK_ID}}:test"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create webhook",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// https://eastus.dev.cognitive.microsoft.com/docs/services/speech-to-text-api-v3-1/operations/WebHooks_Create\n{\n    \"webUrl\": \"{{BASE_URL}}/api/v1/speech-webhook\",\n    \"displayName\": \"Speech service webhook\",\n    \"properties\": {\n        \"secret\": \"my-secret\"\n    },\n    \"events\": {\n        \"datasetCreation\": true,\n        \"datasetProcessing\": true,\n        \"datasetCompletion\": true,\n        \"datasetDeletion\": true,\n        \"modelCreation\": true,\n        \"modelProcessing\": true,\n        \"modelCompletion\": true,\n        \"modelDeletion\": true,\n        \"evaluationCreation\": true,\n        \"evaluationProcessing\": true,\n        \"evaluationCompletion\": true,\n        \"evaluationDeletion\": true,\n        \"transcriptionCreation\": true,\n        \"transcriptionProcessing\": true,\n        \"transcriptionCompletion\": true,\n        \"transcriptionDeletion\": true,\n        \"endpointCreation\": true,\n        \"endpointProcessing\": true,\n        \"endpointCompletion\": true,\n        \"endpointDeletion\": true\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/webhooks",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"webhooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create transcription",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// https://eastus.dev.cognitive.microsoft.com/docs/services/speech-to-text-api-v3-1/operations/Transcriptions_Create\n{\n    \"properties\": {},\n    \"contentUrls\": [\n        \"https://crbn.us/whatstheweatherlike.wav\"\n    ],\n    \"locale\": \"en-GB\",\n    \"displayName\": \"Test transcription\",\n    \"description\": \"\",\n    \"customProperties\": {}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/transcriptions",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"transcriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list transcriptions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/transcriptions",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"transcriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list transcription files",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/transcriptions/4f45e88d-53ff-43d8-a7ad-811b1bc39645/files",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"transcriptions",
+								"4f45e88d-53ff-43d8-a7ad-811b1bc39645",
+								"files"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete webhook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/webhooks/36bac8c3-1849-468a-a4a0-cc6af5cf33d4",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"webhooks",
+								"36bac8c3-1849-468a-a4a0-cc6af5cf33d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete transcription",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{COGNITIVE_URL}}/speechtotext/v3.1/transcriptions/4f45e88d-53ff-43d8-a7ad-811b1bc39645",
+							"host": [
+								"{{COGNITIVE_URL}}"
+							],
+							"path": [
+								"speechtotext",
+								"v3.1",
+								"transcriptions",
+								"4f45e88d-53ff-43d8-a7ad-811b1bc39645"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "9d7f6b4ac7fb4459b76c9d29b09cb7d4",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "Ocp-Apim-Subscription-Key",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "COGNITIVE_URL",
+			"value": "https://westeurope.api.cognitive.microsoft.com",
+			"type": "string"
+		},
+		{
+			"key": "WEBHOOK_ID",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

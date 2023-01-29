@@ -1,0 +1,12 @@
+.box {
+    background-color: #6c6c7067;  
+    border: solid black;
+    width: 50%;
+}
+
+.box-content {
+    border: solid white 5px;
+    padding: 25px;
+    margin: 20px;
+    
+}

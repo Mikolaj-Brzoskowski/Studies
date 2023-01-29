@@ -1,0 +1,8 @@
+n = 12
+suma = 0
+m = 1
+
+while suma <= n:
+    suma = suma + m
+    m += 1
+print (m - 2)

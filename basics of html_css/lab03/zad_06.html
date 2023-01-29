@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorium 3 - Zadanie 6</title>
+    <link rel="stylesheet" href="zad_06.css">
+</head>
+
+<body>
+    <h1>Repertuar filmów</h1>
+    <table>
+        <tr class="head">
+            <th></th>
+            <th>Gdańsk</th>
+            <th>Warszawa</th>
+            <th>Wrocław</th>
+        </tr>
+        <tr>
+            <th>Nietykalni (2011)</th>
+            <td>
+                <div>Wtorek, 18 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+            <td>
+                <div>Wtorek, 18 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+            <td>
+                <div>Wtorek, 18 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+        </tr>
+        <tr class="even">
+            <th>Zielona mila (1999)</th>
+            <td>
+                <div>Środa, 19 sierpnia 2020</div>
+                <div>Godz. 17:00</div>
+            </td>
+            <td>
+                <div>Środa, 19 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+            <td>
+                <div>Środa, 19 sierpnia 2020</div>
+                <div>Godz. 19:00</div>
+            </td>
+        </tr>
+        <tr>
+            <th>Piękny umysł (2001)</th>
+            <td>
+                <div>Czwartek, 20 sierpnia 2020</div>
+                <div>Godz. 18:30</div>
+            </td>
+            <td>
+                <div>Czwartek, 20 sierpnia 2020</div>
+                <div>Godz. 18:30</div>
+            </td>
+            <td>
+                <div>Czwartek, 20 sierpnia 2020</div>
+                <div>Godz. 17:00</div>
+            </td>
+        </tr>
+        <tr class="even">
+            <th>Green Book (2018)</th>
+            <td>
+                <div>Piątek, 21 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+            <td>
+                <div>Piątek, 21 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+            <td>
+                <div>Piątek, 21 sierpnia 2020</div>
+                <div>Godz. 18:00</div>
+            </td>
+        </tr>
+    </table>
+    <form>
+        <fieldset>
+            <legend>Rejestracja</legend>
+            <div class="form-group">
+                <label>Imię i nazwisko</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <input type="email">
+            </div>
+            <div class="form-group">
+                <label>Miasto</label>
+                <select name="city" id="city">
+                    <option value="gd">Gdańsk</option>
+                    <option value="wa">Warszawa</option>
+                    <option value="wr">Wrocław</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Film</label>
+                <select name="movie" id="movie">
+                    <option value="nietykalni">Nietykalni</option>
+                    <option value="zielona-mila">Zielona Mila</option>
+                    <option value="piekny-umysl">Piękny umysł</option>
+                    <option value="green-book">Green Book</option>
+                </select>
+            </div>
+        </fieldset>
+        <div class="button">
+            <button type="submit">Wyślij zgłoszenie</button>
+        </div>
+    </form>
+</body>
+
+</html>

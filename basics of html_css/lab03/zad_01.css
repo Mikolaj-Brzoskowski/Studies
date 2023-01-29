@@ -1,0 +1,7 @@
+p.important {
+    text-transform: uppercase
+}
+
+p.error {
+    color: red;
+}

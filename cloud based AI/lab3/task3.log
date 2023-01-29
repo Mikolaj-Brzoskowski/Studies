@@ -1,0 +1,8 @@
+aws lex-runtime post-text --bot-name="mbrzoskowski_OrderFlowers" --bot-alias="mbrzoskowski_OrderFlowers_test" --user-id=mbrzoskowski --input-text="I want to order flowers"
+{
+    "message": "I didn't understand you, what would you like to do?",
+    "messageFormat": "PlainText",
+    "dialogState": "ElicitIntent",
+    "sessionId": "2022-11-21T15:25:52.118Z-tZsufHWa",
+    "botVersion": "$LATEST"
+}

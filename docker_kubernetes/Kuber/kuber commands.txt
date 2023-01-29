@@ -1,0 +1,15 @@
+kubectl cluster-info
+kubectl get pods
+kubectl describe pod
+kubectl get deployment
+kubectl describe deployment
+kubectl get secret
+kubectl describe secret
+kubectl get cm
+kubectl describe cm
+kubectl get pv
+kubectl describe pv
+kubectl logs podID
+kubectl exec -it podID -- sh
+kubectl apply -f 
+kubectl delete

@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgresql-deployment
+  labels:
+    app: ticket-app
+    type: db
+
+spec:
+  template:
+    metadata:
+      name: postgresql-pod
+      labels:
+        app: ticket-app
+        type: db
+    spec:
+      containers:
+        - name: postgresql-container
+          image: postgresql:alpine
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgresvolume
+              subPath: postgresql
+          env:
+            - name: POSTGRES_USER
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql-config
+                  key: PGUSER
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgresql-secret
+                  key: PGPASSWORD
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: postgresql-config
+                  key: PGDATABASE
+
+      volumes:
+        - name: postgresvolume
+          persistentVolumeClaim:
+            claimName: postgresql-pvc
+
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ticket-app
+      type: db

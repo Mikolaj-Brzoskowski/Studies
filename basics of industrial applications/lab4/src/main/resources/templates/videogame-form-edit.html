@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person </title>
+</head>
+<body>
+
+<h2>Edit Videogame</h2>
+
+<form action="#" th:action="@{/web/videogames/edit}" th:object="${gameToEdit}" method="post">
+    <div>Id: <input type="text" th:field="*{id}" readonly></div>
+    <div>Title: <input type="text" th:field="*{title}"></div>
+    <div>Release year:<input type="number" th:field="*{release_year}"></div>
+    <div>Platform:
+        <select th:field=*{platform}>
+        <option th:each="platform : ${platforms}"
+                th:value="${platform}" th:text="${platform.platform}"></option>
+    </select></div>
+    <div><input type="submit" value="Submit"></div>
+</form>
+</body>
+</html>

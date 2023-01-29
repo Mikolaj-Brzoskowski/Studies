@@ -1,0 +1,20 @@
+{
+    "BotAliases": [        {
+            "name": "mbrzoskowski_OrderFlowers_test",
+            "botVersion": "$LATEST",
+            "botName": "mbrzoskowski_OrderFlowers",
+            "lastUpdatedDate": "2022-11-21T16:25:10.750000+01:00",
+            "createdDate": "2022-11-21T16:25:10.750000+01:00",
+            "checksum": "02a22bf8-7fbd-434f-a5cb-350a4902e633"
+        },
+        {
+            "name": "mbrzoskowski_OrderFlowersDev",
+            "description": "Development version of bot to order flowers on the behalf of a user",
+            "botVersion": "$LATEST",
+            "botName": "mbrzoskowski_OrderFlowers",
+            "lastUpdatedDate": "2022-11-21T16:02:15.751000+01:00",
+            "createdDate": "2022-11-21T16:02:15.751000+01:00",
+            "checksum": "3b28789f-0b7c-42ad-b162-884759231199"
+        }
+    ]
+}

@@ -1,0 +1,146 @@
+@media screen and (min-width: 1025px){
+    .container{
+        width: 100%;
+        height: 50vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .box{
+        display: flex;
+        height: 25%;
+    }
+
+    .orange{
+        background-color: orange;
+        flex: 1;
+    }
+    
+    .green{
+        background-color: green;
+        flex: 1;
+    }
+    
+    .blue {
+        background-color: blue;
+        flex: 1
+    }
+    
+    .gray{
+        background-color: gray;
+        flex: 1
+    }
+    
+    .bg-color{
+        margin: 5px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (min-width:789px) and (max-width: 1024px){
+    .container{
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .box{
+        height: 25%;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .three{
+        height: 75%;
+    }
+
+    .four{
+        height: 50%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .orange{
+        background-color: orange;
+        flex: 1;
+    }
+    
+    .green{
+        background-color: green;
+        flex: 1;
+    }
+    
+    .blue {
+        background-color: blue;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .gray{
+        background-color: gray;
+        width: 98%;
+    }
+    
+    .bg-color{
+        margin: 5px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+        height: 50vh;
+    }
+    
+    .box{
+        height: 25%;
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .one{
+        height: 50%;
+    }
+
+    .two{
+        height: 25%;
+    }
+
+    .three{
+        height: 75%;
+    }
+
+    .four{
+        height: 100%;
+    }
+
+    .orange{
+        background-color: orange;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .green{
+        background-color: green;
+        flex: 1;
+    }
+    
+    .blue {
+        background-color: blue;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .gray{
+        background-color: gray;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .bg-color{
+        margin: 5px;
+        border-radius: 10px;
+    }
+}
+    

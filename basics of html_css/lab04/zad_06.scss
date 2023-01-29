@@ -1,0 +1,54 @@
+
+@for $i from 0 through 2 {
+    .kolor-#{$i+1}{
+        @if $i == 0 {
+            background-color: yellow;
+        }
+        @if $i == 1 {
+            background-color: red;
+        }
+        @if $i == 2 {
+            background-color: orange;
+        }
+        position: absolute;
+        top: 25px;
+        width: 50px;
+        height: 50px;
+        margin-left: 240px * $i;
+    }
+}
+
+@for $i from 0 through 4 {
+.kolor-#{$i+4}{
+    @if $i == 0 or $i == 3{
+        background-color: red;
+    }
+    @if $i == 1 or $i == 4{
+        background-color: yellow;
+    }
+    @if $i == 2 {
+        background-color: orange;
+    }
+    position: absolute;
+    top: 50px;
+    width: 50px;
+    height: 50px;
+    margin-left: 60px + 120px * $i;
+    }
+}
+
+@for $i from 0 through 1 {
+    .kolor-#{$i+9}{
+        @if $i == 0 {
+            background-color: orange;
+        }
+        @if $i == 1 {
+            background-color: yellow;
+        }
+        position: absolute;
+        top: 75px;
+        width: 50px;
+        height: 50px;
+        margin-left: 120px + 240px * $i;
+        }
+    }

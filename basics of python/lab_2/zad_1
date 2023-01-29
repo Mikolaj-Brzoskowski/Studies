@@ -1,0 +1,20 @@
+a = 2
+b = 2
+c = 3
+
+if a > 0 and b > 0 and c > 0:
+    if a > b and a > c:
+        warunek = b + c > a
+    elif b > c and b > a:
+        warunek = a + c > a
+    elif c > b and c > a:
+        warunek = a + b > c
+    elif a == b == c:
+        print("Trójkąt równoboczny")
+        quit()
+
+if warunek == True:
+    print("Da się zbudować trójąt")
+else:
+    print("Nie da się zbudować trójkąta")
+

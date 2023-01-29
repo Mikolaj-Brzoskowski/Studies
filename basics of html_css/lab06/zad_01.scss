@@ -1,0 +1,23 @@
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.color-plane {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: aliceblue;
+}
+
+@for $i from 0 to 13 {
+    div>div:nth-child(#{1 + 2 * $i}){
+        background-color: gray;
+    }
+}
+
+@for $i from 1 to 13 {
+    div>div:nth-child(#{2 * $i}){
+        background-color: orange;
+    }
+}

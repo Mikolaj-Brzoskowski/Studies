@@ -1,0 +1,32 @@
+version: '3'
+
+services:
+  bezp_backend:
+    restart: always
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./backend
+    ports:
+      - 5000:5000
+    
+  bezp_frontend:
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./frontend
+    volumes:
+      - /opt/app/node_modules
+      - ./frontend:/opt/app
+    ports:
+      - 3000:3000
+    
+  keycloak:
+      image: quay.io/keycloak/keycloak:15.0.2
+      environment:
+        - KEYCLOAK_ADMIN=admin 
+        - KEYCLOAK_PASSWORD=admin
+      ports:
+        - 8080:8080
+      depends_on:
+        - bezp_backend
+        - bezp_frontend
+  

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgresql-config
+  labels:
+    app: my-app
+
+data:
+  PGHOST: postgresql-clusterip
+  PGPORT: "5432"
+  PGUSER: postgresql
+  PGDATABASE: ticket-db

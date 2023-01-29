@@ -1,0 +1,14 @@
+$width: 100px;
+$height: 20px;
+$background: #005469;
+$color: #c53838;
+
+@for $i from 1 through 4 {
+    .button-#{$i}{
+        margin: 10px;
+        width: $width * $i;
+        height: $height * $i;
+        background-color: $background * $i;
+        color: $color * $i;
+    }
+}

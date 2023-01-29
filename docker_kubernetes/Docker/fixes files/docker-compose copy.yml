@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+
+  szafa-postgres:
+    image: 'postgres:alpine'
+    restart: always
+    volumes:
+      - ./pgdata:/var/lib/postgres/data
+    environment:
+      - POSTGRES_PASSWORD=1qaz2wsx
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=myappuser
+
+  szafa-backend:
+    restart: always
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./szafa-backend
+    environment:
+      - POSTGRES_HOST=szafa-postgres
+      - POSTGRES_PORT=5432
+      - REDIS_HOST=myredis
+      - POSTGRES_PASSWORD=1qaz2wsx
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=myappuser
+      - DATABASE_URL=szafa-postgres://myappuser:1qaz2wsx@szafa-postgres:5432/szafa-postgres
+    depends_on:
+      - szafa-postgres
+    
+
+  szafa-ngnix:
+    restart: always
+    build: 
+      dockerfile: Dockerfile.dev
+      context: ./szafa-ngnix
+    ports:
+      - '9090:80'
+    
+  szafa-frontend:
+    build: 
+      dockerfile: Dockerfile
+      context: ./szafa-frontend
+    volumes:
+      - /opt/app/node_modules
+      - ./szafa-frontend:/opt/app
+    
+  
+
+  szafa-redis:
+    image: 'redis:alpine'
+
+  

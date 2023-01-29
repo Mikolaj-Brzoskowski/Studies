@@ -1,0 +1,33 @@
+﻿  main.cpp
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(115,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(193,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(194,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(195,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(196,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(197,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(201,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(202,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(203,26): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(207,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(208,24): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(213,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(269,60): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(475,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(499,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(602,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(663,53): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(688,26): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(728,55): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(739,61): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(750,57): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(754,56): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(777,34): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(785,30): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(825,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(829,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(835,57): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(837,18): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(844,28): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(893,21): warning C4244: '-=': conversion from 'double' to 'int', possible loss of data
+E:\Mikolaj\Documents\Projekty\szablon2\main.cpp(901,22): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  szablon2vs19.vcxproj -> E:\Mikolaj\Documents\Projekty\szablon2\Debug\szablon2vs19.exe

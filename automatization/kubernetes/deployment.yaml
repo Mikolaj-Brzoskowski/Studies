@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: my-api-deployment
+  labels:
+    workshop: "true"
+    app: my-api
+  namespace: mbrzoskowski
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      workshop: "true"
+      app: my-api
+  template:
+    metadata:
+      name: my-api-pod
+      labels:
+        workshop: "true"
+        app: my-api
+    spec:
+      containers:
+      - name: my-api-container
+        image: pikussmietnikus/rest_api
+        ports:
+        - containerPort: 3000

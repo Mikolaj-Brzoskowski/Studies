@@ -1,0 +1,43 @@
+docker ps  #wyświetla działające kontenery
+docker ps -all #wyświetla wszystkie działające wcześniej
+docker version
+docker run -it busybox sh
+ls -hlan #human readable
+docker start -a CONTAINER_ID #dołącza terminal (output)
+docker exec -it CONTAINER_ID #dołącza terminal
+docker stop CONTAINER_ID
+docker run -p 9000:80 nginx:stable-alpine
+docker cp #kopiuje plik z kontenera na maszynę lokalną i na odwrót
+
+FROM (alpine:latest/node:alpine) #docker image
+
+RUN apk add --update redis
+RUN apk add --update nginx
+
+WORKDIR #ścieżka robocza                          
+
+COPY #kopiowanie
+
+RUN, CMD #komendy
+
+docker build -f file . #buduje image
+docker images #lista images
+docker run CONTAINER_ID
+
+docker run -p 3000:3000 CONTAINER_ID #włacza kontener z przypisanymi portami
+docker tag #zmiana repo
+docker rm #usunięcie kontenera
+docker image rm #usunięcie image
+
+docker run -v /opt/app/node_modules -v /home/mikolaj/TCH/Project_docker/myfrontend:/opt/app -p 3000:3000 --rm #przypięcie woluminu
+docker run -it --name CONTAINRER_NAME alpine sh
+docker network ls
+docker network create
+docker run --rm --network mynetwork --name mybackend 449 #uruchomienie backendu z podłączonym networkiem
+docker run --rm --name postgres -e POSTGRES_PASSWORD=mysecretpassword --network mynetwork 5cd #uruchomienie postgresa z podłączonym networkiem
+
+docker compose up  --build
+docker compose down         #obsługa multicontenera
+
+docker system prune -all #usuwanie images
+docker images -all prune

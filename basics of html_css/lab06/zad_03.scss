@@ -1,0 +1,55 @@
+.container{
+    width: 80vw;
+    height: 90vh;
+    display: grid;
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(5, 19%);
+    column-gap: 15px;
+    row-gap: 10px;
+    padding: 10px;
+}
+
+header {
+    grid-area: 1 / 1 / 1 / 5;
+    background-color: beige;
+    border: solid black 2px;
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    ul{
+    list-style: none;
+    }
+    grid-area: 2 / 1 / 5 / 1;
+    background-color: beige;
+    border: solid black 2px;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    grid-area: 2 / 2 / 5 / 4;
+    background-color: beige;
+    border: solid black 2px;
+    height: 100%;
+    width: 100%;
+}
+
+aside {
+    grid-area: 2 / 4 / 5 / 5;
+    background-color: beige;
+    border: solid black 2px;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    grid-area: 5 / 1 / 6 / 5;
+    background-color: beige;
+    border: solid black 2px;
+    height: 100%;
+    width: 100%;
+}

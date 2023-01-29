@@ -1,0 +1,24 @@
+#outer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :nth-child(3){
+        background-color: lightgray;
+    }
+    :nth-child(2){
+        background-color: gray;
+    }
+    :nth-child(1){
+        background-color: gainsboro;
+    }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}

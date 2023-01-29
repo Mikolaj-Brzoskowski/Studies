@@ -1,0 +1,7 @@
+$margin: 20px;
+
+@for $i from 1 through 10{
+    .margin-#{$i}{
+        margin-left: $margin * $i;
+    }
+}

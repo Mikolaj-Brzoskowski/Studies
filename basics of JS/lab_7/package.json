@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "zad1": "nodemon src/reduce.js",
+    "zad2": "nodemon src/objects.js",
+    "zad3": "nodemon src/creatingObjects.js"
+  },
+  "name": "Lab7",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "eslint": "^7.24.0",
+    "nodemon": "^2.0.7"
+  }
+}

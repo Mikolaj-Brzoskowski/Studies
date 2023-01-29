@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="brooke" class="pl.ug.mbrzoskowski.lab3_zad2.domain.Person">
+        <property name="first_name" value="Brooke" />
+        <property name="last_name" value="Ratcliff" />
+        <property name="email" value="bratcliffl@dailymotion.com" />
+        <property name="company_name" value="Livetube" />
+    </bean>
+
+
+</beans>

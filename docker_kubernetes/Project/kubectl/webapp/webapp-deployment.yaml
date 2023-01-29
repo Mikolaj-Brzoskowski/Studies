@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  labels:
+    app: ticket-app
+
+spec:
+  template:
+    metadata:
+      name: webapp-pod
+      labels:
+        app: ticket-app
+    spec:
+      containers:
+        - name: webapp-container
+          image: pikussmietnikus/ticket-webapp
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ticket-app

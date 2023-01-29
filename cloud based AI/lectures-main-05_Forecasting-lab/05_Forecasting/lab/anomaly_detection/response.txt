@@ -1,0 +1,4 @@
+1. CSVReader
+2. FasterXML
+3. Discord
+4. (70, 0.25) =  31, (90, 0.25) = 62

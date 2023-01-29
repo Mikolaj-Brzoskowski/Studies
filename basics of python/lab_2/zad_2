@@ -1,0 +1,12 @@
+temp = 30
+
+if temp < -15:
+    print("Bardzo zimno")
+elif temp < 0:
+    print("Zimno")
+elif temp < 15:
+    print("Neutralnie")
+elif temp < 25:
+    print("Ciepło")
+else:
+    print("Bardzo ciepło")

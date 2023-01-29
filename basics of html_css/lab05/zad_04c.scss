@@ -1,0 +1,27 @@
+#outer {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    :nth-child(3){
+        background-color: lightgray;
+        align-self: flex-end;
+    }
+    :nth-child(2){
+        background-color: gray;
+    }
+    :nth-child(1){
+        background-color: gainsboro;
+        align-self: flex-start;
+    }
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: aliceblue;
+    padding: 10px;
+}

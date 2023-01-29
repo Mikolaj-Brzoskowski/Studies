@@ -1,0 +1,81 @@
+body {
+    background-color:lightgray;
+    font-family: Arial;
+}
+
+h1 {
+    padding: 10px;
+}
+
+table {
+    width: 60%;
+    text-align: left;
+    margin-bottom: 30px;
+    background-color: lightskyblue;
+    border-radius: 15px 15px 0px 0px;
+    background-color: blue;
+}
+
+table tr:nth-child(even) {
+    background-color: rgb(140, 200, 240);
+}
+
+tr {
+    border: solid blue;
+}
+
+fieldset {
+    width: 25%;
+}
+
+tr > td {
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+tr > th {
+    padding: 10px;
+}
+
+.head {
+    height: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    color: white;
+}
+
+fieldset {
+    border: solid black;
+}
+
+.even {
+    background-color: lightcyan;
+}
+
+fieldset {
+    border-radius: 15px;
+    background-color: white;
+}
+
+input, select{
+   float: right;
+   clear: both;
+   margin-bottom: 3px;
+}
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+select {
+    width: 30%;
+}
+
+button{
+    background-color: blue;
+    color: White;
+    height: 32px;
+    width: 132px;
+    margin-left: 20%;
+    margin-top: 8px;
+}

@@ -1,0 +1,13 @@
+a = 0
+b = 1
+k = 0
+n = 5
+
+while k < n:
+    print(b)
+    b = a + b
+    a = b - a
+    k = k + 1
+
+
+#konsola wypisuje n pierwszych wyrazów ciagu Fibonachiego

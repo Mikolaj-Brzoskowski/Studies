@@ -1,0 +1,7 @@
+dec = 29
+bin_cnt = 0
+
+while dec != 0:
+    dec = int( dec / 2)
+    bin_cnt += 1
+print(bin_cnt)
