@@ -1,0 +1,6 @@
+[submodule "Frontend-Dev-Project"]
+	path = Frontend-Dev-Project
+	url = git@github.com:Mikolaj-Brzoskowski/Frontend-Dev-Project.git
+[submodule "project_interceptor"]
+	path = project_interceptor
+	url = git@github.com:Mikolaj-Brzoskowski/project_interceptor.git
