@@ -1,0 +1,53 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.game-area {
+  display: flex;
+  position: relative;
+}
+
+.square {
+  position: relative;
+  height: 2vw;
+  width: 2vw;
+  border: 1px solid rgba(255, 255, 255, 0.521);
+}
+
+.snake-cell {
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  background-color: green;
+  border-radius: 25px;
+}
+
+.apple-cell {
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  background-image: url("../public/apple.png");
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.mines-cell {
+  position: absolute;
+  height: 5%;
+  width: 5%;
+  background-image: url("../public/mine.png");
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.score{
+  position: absolute;
+  margin: 35px
+}
